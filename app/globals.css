@@ -24,3 +24,53 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.article-body {
+  line-height: 1.75;
+  color: #3f3f46;
+}
+
+@media (prefers-color-scheme: dark) {
+  .article-body {
+    color: #a1a1aa;
+  }
+}
+
+.article-body h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #18181b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .article-body h2 {
+    color: #fafafa;
+  }
+}
+
+.article-body p {
+  margin-top: 1rem;
+}
+
+.article-body ul {
+  margin-top: 1rem;
+  margin-left: 1.25rem;
+  list-style: disc;
+}
+
+.article-body li {
+  margin-top: 0.5rem;
+}
+
+.article-body strong {
+  font-weight: 600;
+  color: #18181b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .article-body strong {
+    color: #fafafa;
+  }
+}
