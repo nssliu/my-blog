@@ -17,5 +17,5 @@ excerpt: "这是我在 Cloudflare Pages 上部署的第一篇测试博客2。"
 1. 在 `content/posts/` 下新建 `.md` 文件
 2. 写好 frontmatter（`title`、`date`、`excerpt`）
 3. `git push`，等待站点更新
-![img.png](img.png)
+![示例图片](/images/posts/first/img.png)
 感谢阅读。
