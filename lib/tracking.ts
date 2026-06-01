@@ -1,5 +1,5 @@
-const WORKER_URL =
-  process.env.NEXT_PUBLIC_WORKER_URL ?? "http://localhost:8787";
+// Production Worker API URL — 固定不变，无需环境变量
+const WORKER_URL = "https://blog-api.nssliu521.workers.dev";
 
 function post(path: string, body: Record<string, unknown>): void {
   // Fire-and-forget; swallow errors so tracking never breaks UX.
