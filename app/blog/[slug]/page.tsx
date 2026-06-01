@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArticleBody } from "@/components/ArticleBody";
+import { ArticleTracker } from "@/components/ArticleTracker";
+import { ArticleFooter } from "@/components/ArticleFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { getPostBySlug, getPostSlugs } from "@/lib/posts";
 
@@ -42,6 +44,8 @@ export default async function BlogPostPage({ params }: PageProps) {
           ← 返回首页
         </Link>
 
+        <ArticleTracker slug={slug} />
+
         <article className="mt-8">
           <time
             dateTime={post.date}
@@ -53,9 +57,11 @@ export default async function BlogPostPage({ params }: PageProps) {
             {post.title}
           </h1>
           <div className="mt-8">
-            <ArticleBody content={post.content} />
+            <ArticleBody content={post.content} slug={slug} />
           </div>
         </article>
+
+        <ArticleFooter slug={slug} />
       </main>
     </div>
   );

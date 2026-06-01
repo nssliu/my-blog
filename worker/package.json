@@ -1,0 +1,16 @@
+{
+  "name": "blog-worker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate:local": "wrangler d1 execute blog-db --local --file=./schema.sql",
+    "db:migrate:remote": "wrangler d1 execute blog-db --remote --file=./schema.sql"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250523.0",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.14.1"
+  }
+}

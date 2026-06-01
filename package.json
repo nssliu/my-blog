@@ -11,7 +11,11 @@
     "pages:build": "next build",
     "pages:deploy": "npm run build && wrangler deploy",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "worker:dev": "cd worker && npx wrangler dev",
+    "worker:deploy": "cd worker && npx wrangler deploy",
+    "worker:db:local": "cd worker && npx wrangler d1 execute blog-db --local --file=./schema.sql",
+    "worker:db:remote": "cd worker && npx wrangler d1 execute blog-db --remote --file=./schema.sql"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

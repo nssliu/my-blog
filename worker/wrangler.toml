@@ -1,0 +1,14 @@
+name = "blog-api"
+main = "src/index.ts"
+compatibility_date = "2025-05-23"
+
+[vars]
+# CORS 允许的来源 — 你的博客域名
+BLOG_ORIGIN = "https://my-blog.nssliu521.workers.dev"
+# Dashboard 登录密码，部署后记得改
+ADMIN_PASSWORD = "changeme"
+
+[[d1_databases]]
+binding = "blog_db"
+database_name = "blog-db"
+database_id = "e81835c0-c174-4994-8c47-f92c2ba9a4f0"
